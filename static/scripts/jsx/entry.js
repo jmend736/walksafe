@@ -1,18 +1,14 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-class Entry extends React.Component {
-    render() {
-        return(
-            <div>
-                <h2>Hello world</h2>
-                Hopefully it works
-            </div>
-        );
-    }
-}
+import Router from './router.js'
+import store from './redux/store.js'
+
+import { Provider } from 'react-redux';
 
 render(
-    <Entry />,
+    <Provider store={store}>
+        <Router />
+    </Provider>,
     document.getElementById('main')
 );
