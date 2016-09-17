@@ -1,0 +1,19 @@
+{
+  "name": "walksafe",
+  "version": "1.0.0",
+  "description": "Webapp to protect you when walking through dangerous areas",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hannahapuan/walksafe.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hannahapuan/walksafe/issues"
+  },
+  "homepage": "https://github.com/hannahapuan/walksafe#readme"
+}
