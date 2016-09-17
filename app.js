@@ -10,5 +10,5 @@ app.get('/', function (req, res) {
 });
 
 app.listen(1337, function () {
-  console.log('Server is running!');
+  console.log('Server is running! [Port: 1337]');
 });
