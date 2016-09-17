@@ -17,6 +17,9 @@ export default class extends React.Component {
     render() {
         return(
             <div>
+                <h1>HELLO WORLDSSSS</h1>
+                <ReduxTestConnected />
+                <input type="text" onChange={this.onChange} />
                 <Map />
             </div>
         );

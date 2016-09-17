@@ -1,6 +1,7 @@
 import React from 'react';
 
 import GoogleMap from 'google-map-react';
+import * as act from './redux/actions.js';
 
 export default class extends React.Component {
     constructor(props) {
@@ -8,8 +9,7 @@ export default class extends React.Component {
         this.checking = this.checking.bind(this);
         this.renderMap = this.renderMap.bind(this);
         this.state = {
-            checking: setInterval(this.checking, 30),
-            map: null
+            checking: setInterval(this.checking, 30)
         };
     }
     componentWillDismount() {
@@ -26,7 +26,7 @@ export default class extends React.Component {
                 center: {lat: -34.397, lng: 150.644},
                 zoom: 8
             });
-        this.setState({map: map});
+        act.updateMap(map);
     }
     checking(){
         console.log("check");

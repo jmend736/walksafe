@@ -6,4 +6,17 @@ export const updateTest = (text) => {
         type: c.TEST,
         test: text
     });
-}
+};
+
+export const updateMap = (map) => {
+    store.dispatch({
+        type: c.UPDATE_MAP,
+        map: map
+    });
+};
+
+export const resetMap = () => {
+    store.dispatch({
+        type: c.RESET_MAP
+    });
+};
