@@ -1,2 +1,2 @@
 # walksafe
-HackMIT Project - Hannah Apuan
+HackMIT Project - Julian Mendoza
