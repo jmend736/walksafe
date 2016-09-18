@@ -4,6 +4,7 @@ import * as act from './redux/actions.js';
 import { connect } from 'react-redux';
 
 import Map from './map.js';
+import MapChanges from './map/mapChanges.js';
 
 export default class extends React.Component {
     constructor(props) {
@@ -21,6 +22,7 @@ export default class extends React.Component {
                 <ReduxTestConnected />
                 <input type="text" onChange={this.onChange} />
                 <Map />
+                <MapChanges />
             </div>
         );
     }

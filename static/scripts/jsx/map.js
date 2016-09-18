@@ -2,8 +2,9 @@ import React from 'react';
 
 import GoogleMap from 'google-map-react';
 import * as act from './redux/actions.js';
+import { connect } from 'react-redux';
 
-export default class extends React.Component {
+export default class MapView extends React.Component {
     constructor(props) {
         super(props);
         this.checking = this.checking.bind(this);
@@ -23,13 +24,12 @@ export default class extends React.Component {
         var map = new google.maps.Map(
             document.getElementById('map'),
             {
-                center: {lat: -34.397, lng: 150.644},
-                zoom: 8
+                center: {lat: 37.782, lng: -122.447},
+                zoom: 13
             });
         act.updateMap(map);
     }
     checking(){
-        console.log("check");
         if (window.google != undefined) {
 
             // Stop checking
@@ -48,12 +48,3 @@ export default class extends React.Component {
         );
     }
 }
-
-            //<GoogleMap
-                //bootstrapURLKeys={{
-                    //key: "AIzaSyDfaYdCaudaOx1bpWyETAxzTMZ5IYL0TRI"
-                //}}
-                //defaultCenter={{lat: 59.938043, lng: 30.337157}}
-                //defaultZoom={4}
-                //minZoom={4}
-                    ///>

@@ -16,7 +16,8 @@ const mainReducer = (state=initialState, action) => {
 }
 
 const initialMapState = {
-    map: null
+    map: null,
+    heatmap: []
 }
 
 const mapReducer = (state=initialMapState, action) => {
@@ -25,6 +26,8 @@ const mapReducer = (state=initialMapState, action) => {
             return Object.assign({}, state, {map: action.map});
         case c.RESET_MAP:
             return Object.assign({}, initialState);
+        case c.UPDATE_HEATMAP:
+            return Object.assign({}, state, {heatmap: action.heatmap});
         default:
             return state;
     }

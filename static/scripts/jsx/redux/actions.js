@@ -20,3 +20,10 @@ export const resetMap = () => {
         type: c.RESET_MAP
     });
 };
+
+export const updateHeatmap = (heatmap) => {
+    store.dispatch({
+        type: c.UPDATE_HEATMAP,
+        heatmap: heatmap
+    })
+}
