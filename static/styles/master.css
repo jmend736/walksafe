@@ -63,5 +63,47 @@ html, body {
 }
 
 .directions {
-    margin: 2em;
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.directions--text {
+    flex-align: center;
+    flex-basis: 1;
+    margin: 15px;
+}
+
+
+.directions--travel {
+    flex-basis: 1;
+    margin: 3px;
+}
+
+.directions--travel > div {
+    margin: 10px;
+    padding: 4px;
+    text-align: center;
+}
+
+.directions--travel > button {
+    margin: 10px;
+    padding: 4px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+
+.directions--travel > button {
+    border-radius: 5px;
+}
+
+.directions--travel i {
+    margin: auto;
+}
+
+.submitButton {
+    margin: 3em;
+    padding: 1em;
 }

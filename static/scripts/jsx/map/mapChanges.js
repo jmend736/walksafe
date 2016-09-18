@@ -30,7 +30,6 @@ export default class MapHeatmap extends React.Component {
         // TODO: Remove or change to better data
         axios.get("/data/data.json").then((resp) => {
             heatmap = resp.data.markers.map(i=>([parseFloat(i.lt), parseFloat(i.ln)])).filter(v=>(!(isNaN(v[0]) || isNaN(v[1]))));
-            console.log(heatmap);
             this.setHeatmap(heatmap);
         })
 

@@ -25,5 +25,13 @@ export const updateHeatmap = (heatmap) => {
     store.dispatch({
         type: c.UPDATE_HEATMAP,
         heatmap: heatmap
-    })
+    });
+}
+
+export const formChange = (field, value) => {
+    store.dispatch({
+        type: c.FORM_CHANGE,
+        field: field,
+        value: value
+    });
 }

@@ -33,9 +33,52 @@ const mapReducer = (state=initialMapState, action) => {
     }
 }
 
+const initialDirForm = {
+    origin: "",
+    destination: "",
+    travelMode: "WALKING",
+    transitOptions: {},
+    drivingOptions: {},
+    waypoints: [],
+    optimizeWaypoints: false,
+    provideRouteAlternatives: true,
+    avoidHighways: false,
+    avoidTolls: true
+}
+
+const directionFormReducer = (state=initialDirForm, action) => {
+    switch(action.type) {
+        case c.FORM_CHANGE:
+            let field = "";
+            let value = "";
+        switch(action.field) {
+            case "Origin":
+                field = "origin";
+                value = action.value;
+                break;
+            case "Destination":
+                field = "destination";
+                value = action.value;
+                break;
+            case "Avoid Highways":
+                field = "avoidHighways";
+                value = action.value;
+                break;
+            case "Avoid Tolls":
+                field = "avoidTolls";
+                value = action.value;
+                break;
+        }
+        return Object.assign({}, state, {[field]: value});
+    default:
+        return state;
+    }
+}
+
 let combined = combineReducers({
     main: mainReducer,
-    map: mapReducer
+    map: mapReducer,
+    directionForm: directionFormReducer
 });
 
 export default createStore(combined);
