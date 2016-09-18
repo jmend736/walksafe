@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { connect } from 'react-redux';
+import Directions from './directions.js';
 
 
 class TopBar extends React.Component {
@@ -20,7 +21,7 @@ class TopBar extends React.Component {
         return(
             <div className="topbar__container" style={this.state.style} >
                 <div className="topbar">
-                    Hello World!
+                    <Directions />
                 </div>
                 <div className="topbar__pull" onClick={this.changeState}>
                     <div className={"topbar__triangle "+this.state.direction} />

@@ -61,3 +61,7 @@ html, body {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
 }
+
+.directions {
+    margin: 2em;
+}
