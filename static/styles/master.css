@@ -1,0 +1,63 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mainview {
+    position: relative;
+}
+
+#map {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.topbar__container {
+    height: 200px;
+    max-height: 100vh;
+    background-color: #ccc;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: box-shadow .5s;
+    transition: top .5s;
+}
+
+.topbar__pull {
+    width: 100px;
+    height: 50px;
+    background-color: #aaa;
+    position: absolute;
+    bottom:-50px;
+    right: 0;
+    display: flex;
+    cursor: pointer;
+    border-radius: 10px 0px 10px 10px;
+}
+
+.topbar__triangle {
+    width: 0;
+    height: 0;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.up {
+    border-bottom: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+.down {
+    border-top: 10px solid black;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
